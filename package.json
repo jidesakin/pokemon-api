@@ -1,0 +1,12 @@
+{
+  "name": "pokemon-api",
+  "version": "1.0.0",
+  "description": "Pokemon API",
+  "main": "index.js",
+  "repository": "http://localhost:3000",
+  "author": "Babajide Owosakin <jideowosakin@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "hapi": "^18.1.0"
+  }
+}
