@@ -15,6 +15,7 @@ const envVarSchema = joi
       .default(true),
     REDIS_HOST: joi.string().default('127.0.0.1'),
     REDIS_PORT: joi.string().default('6379'),
+    POKEMON_API_URL: joi.string().required(),
   })
   .unknown()
   .required();
@@ -34,6 +35,7 @@ const config = {
     host: envVars.REDIS_HOST,
     port: envVars.REDIS_PORT,
   },
+  pokemonApiUrl: envVars.POKEMON_API_URL,
 };
 
 module.exports = config;
