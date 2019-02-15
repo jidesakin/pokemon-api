@@ -12,11 +12,25 @@ app.use(logger());
 app.use(async (ctx, next) => {
   try {
     await next();
+    const rt = ctx.response.get('X-Response-Time');
+    console.log(`${ctx.method} ${ctx.url} - ${rt}`);
   } catch (error) {
     ctx.status = error.status || 500;
-    ctx.body = error.message;
+    ctx.body = { message: error.message };
     ctx.app.emit('error', error, ctx);
   }
+});
+
+
+app.use(async (ctx, next) => {
+  const start = Date.now();
+  await next();
+  const ms = Date.now() - start;
+  ctx.set('X-Response-Time', `${ms}ms`);
+});
+
+app.on('error', (err, ctx) => {
+  console.error('server error', err, ctx);
 });
 
 const server = app.listen(PORT, () =>
