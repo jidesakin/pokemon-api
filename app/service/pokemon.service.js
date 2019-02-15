@@ -2,14 +2,20 @@ const axios = require('axios');
 
 const BASE_URL = 'https://pokeapi.co/api/v2/pokemon';
 
-const getPokemAbilities = async name => {
-  const abilites = await axios.get({
-    method: 'get',
-    url: `${BASE_URL}/${name}`,
-  });
+const getAbilities = async name => {
+  let abilites = [];
+  try {
+    const response = await axios({
+      method: 'get',
+      url: `${BASE_URL}/${name}`,
+    });
+    abilites = response.data.abilities;
+  } catch (error) {
+    abilites = [];
+  }
   return abilites;
 };
 
 module.exports = {
-  getPokemAbilities,
+  getAbilities,
 };
