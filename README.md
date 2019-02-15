@@ -7,7 +7,7 @@ The API uses an third-party API -  [Poke API](http://pokeapi.co)
 - `config`: contains the file that holds the environment variables.
 - `server`: contains tcode that starts the application
 - `test`: contains the integration and unit tests
-- `.env`: contains the environment variables
+- `.env.sample`: contains the environment variables
 
 
 ## Dependencies
@@ -19,6 +19,7 @@ The API uses an third-party API -  [Poke API](http://pokeapi.co)
 
 - Clone this repo by running this command: `git clone https://github.com/jidesakin/pokemon-api.git`
 - Run `cd pokemon-api && yarn install` to install dependencies
+- Make a copy of the `.env.sample` and rename it to `.env`
 - Run `yarn start` to start the application
 
 
