@@ -19,4 +19,11 @@ describe('Integration tests', () => {
     expect(response.body.name).toBe(name);
     expect(response.body).toHaveProperty('abilities');
   });
+
+  test('should not get pokemon abilities GET /pokemon/:name', async () => {
+    const name = 'Random';
+    const response = await request(server).get(`/pokemon/${name}`);
+    expect(response.status).toEqual(404);
+    expect(response.body).toHaveProperty('message');
+  });
 });
