@@ -1,8 +1,10 @@
+require('dotenv').config()
+
 const request = require('supertest');
 const server = require('../server/index.js');
 
 beforeAll(async () => {
-  console.log('Starting tests...');
+  console.log('Starting Integration tests...');
 });
 
 afterAll(() => {
@@ -11,7 +13,7 @@ afterAll(() => {
 
 describe('Integration tests', () => {
   test('get pokemon abilities GET /pokemon/:name', async () => {
-    const name = 'Jidesakin';
+    const name = 'ditto';
     const response = await request(server).get(`/pokemon/${name}`);
     expect(response.status).toEqual(200);
     expect(response.body.name).toBe(name);
