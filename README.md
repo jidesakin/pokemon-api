@@ -1,18 +1,24 @@
 # pokemon-api
 This API returns the abilities of a Pokemon given a Pokemon’s name. It is built using Koa - a minimalistic Node Js framework.
-The API uses an third-party API (Poke API)['http://pokeapi.co']
+The API uses an third-party API -  [Poke API](http://pokeapi.co)
 
-# Folder Structure
-- `app/`: Contains application code which includes the controller, service, routes, middleware, custom exception
+## Folder Structure
+- `app`: contains application code which includes the controller, service, routes, middleware, custom exception
+- `config`: contains the file that holds the environment variables.
+- `server`: contains tcode that starts the application
 
-# How to test
-- Run the following To run the test
 
-# Dependencies
+## Dependencies
 - Node
-- Redis: use for caching the API responses. Make sure you have redis server installed and started. To install redis click here. To start your redis server, run the following command: `redis-server`.
+- Redis: use for caching the API responses. Make sure you have redis server installed and started. To install redis [click here](https://redis.io/topics/quickstart). To start your redis server, run the following command: `redis-server`.
 
 
-# How to run the API
+## How to run the API
 
-- Clone this repo by running this 
+- Clone this repo by running this command: `git clone https://github.com/jidesakin/pokemon-api.git`
+- Run `cd pokemon-api && yarn install` to install dependencies
+- Run `yarn start` to start the application
+
+
+## How to test
+- Run `yarn test` to run the tests
