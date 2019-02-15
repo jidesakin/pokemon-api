@@ -1,8 +1,8 @@
-const PokemonService = require('../service/pokemon.service');
+const PokeApiService = require('../service/pokeapi');
 
 const getAbilitiesByName = async ctx => {
   const name = ctx.params.name.toLowerCase();
-  const abilities = await PokemonService.getAbilitiesByName(name);
+  const abilities = await PokeApiService.getAbilitiesByName(name);
   ctx.body = { name, abilities };
 };
 

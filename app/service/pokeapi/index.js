@@ -1,10 +1,9 @@
 const axios = require('axios');
 
-const { pokemonApiUrl } = require('../../config/config');
-const ApiError = require('../exception/ApiError');
+const { pokemonApiUrl } = require('../../../config/config');
+const ApiError = require('../../exception/ApiError');
 
 const getAbilitiesByName = async name => {
-  console.log(pokemonApiUrl)
   let abilites = [];
   try {
     const response = await axios({
