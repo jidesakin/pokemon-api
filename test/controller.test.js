@@ -6,8 +6,9 @@ const pokemonController = require('../app/pokemon/pokemon.controller');
 describe('Controller Test', () => {
 
     test('Given a pokemon name should return the abilities', async () => {
-        const ctx = { params: { name: 'ditto' } };
+        const ctx = { params: { name: 'Ditto' } };
         await pokemonController.getAbilitiesByName(ctx);
+        console.log(ctx)
         expect(ctx.body).toBeDefined();
     });
 

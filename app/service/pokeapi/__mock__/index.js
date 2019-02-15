@@ -1,4 +1,4 @@
-const MockPokeApi = jest.fn().mockImplementation(() => ({
+const MockPokeApi = {
     async getAbilitiesByName(name) {
         if (name === 'invalid') {
             throw new ApiError('Pokemon API not reachable');
@@ -25,6 +25,6 @@ const MockPokeApi = jest.fn().mockImplementation(() => ({
             ]
         }
     }
-}));
+}
 
 module.exports = MockPokeApi;
