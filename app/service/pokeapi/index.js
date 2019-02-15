@@ -1,8 +1,8 @@
 const axios = require('axios');
 
 const { pokemonApiUrl } = require('../../../config/config');
-const ApiError = require('../../exception/ApiError');
-const NotFoundError = require('../../exception/NotFoundError');
+const ApiError = require('../../exception/api.error');
+const NotFoundError = require('../../exception/not-found.error');
 
 const throwError = (error) => {
     if (error.response) {
