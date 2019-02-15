@@ -3,7 +3,7 @@ This API returns the abilities of a Pokemon given a Pokemon’s name. It is buil
 The API uses an third-party API -  [Poke API](http://pokeapi.co)
 
 ## Folder Structure
-- `app`: contains application code which includes the controller, service, routes, middleware, custom exception
+- `app`: contains application code which includes the controller (`pokemon`), `service`, `router`, `middleware`, custom `exception`.
 - `config`: contains the file that holds the environment variables.
 - `server`: contains tcode that starts the application
 - `test`: contains the integration and unit tests
