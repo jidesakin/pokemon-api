@@ -11,8 +11,9 @@ The API uses an third-party API -  [Poke API](http://pokeapi.co)
 
 
 ## Dependencies
-- Node
-- Redis: use for caching the API responses. Make sure you have redis server installed and started. To install redis [click here](https://redis.io/topics/quickstart). To start your redis server, run the following command: `redis-server`.
+- **Node**: v10.9.0
+- **Redis**: use for caching the API responses. Make sure you have redis server installed and started. To install redis [click here](https://redis.io/topics/quickstart). To start your redis server, run the following command: `redis-server`.
+- **Yarn**: used for dependency management
 
 
 ## How to run the API
