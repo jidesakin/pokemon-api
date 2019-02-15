@@ -6,6 +6,8 @@ The API uses an third-party API -  [Poke API](http://pokeapi.co)
 - `app`: contains application code which includes the controller, service, routes, middleware, custom exception
 - `config`: contains the file that holds the environment variables.
 - `server`: contains tcode that starts the application
+- `test`: contains the integration and unit tests
+- `.env`: contains the environment variables
 
 
 ## Dependencies
