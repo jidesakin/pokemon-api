@@ -11,7 +11,7 @@ const getAbilities = async name => {
     });
     abilites = response.data.abilities;
   } catch (error) {
-    abilites = [];
+    throw error
   }
   return abilites;
 };
